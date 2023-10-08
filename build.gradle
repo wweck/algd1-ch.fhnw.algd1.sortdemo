@@ -2,10 +2,15 @@ apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'idea'
 
-mainClassName = "Application"
+application {
+	mainClass = "Application"
+}
 
-sourceCompatibility = 17
-targetCompatibility = 17
+java {
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}
+
 compileJava.options.encoding = 'UTF-8'
 
 repositories {
